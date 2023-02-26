@@ -1,0 +1,121 @@
+:root
+{
+    --clr-dark: #0f172a;
+    --clr-light: #f1f5f9;
+    --clr-accent: #e11d48;
+    --clr-bg: #191825;
+}
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    word-spacing: 1.6;
+    /* color: var(--clr-dark); */
+    background-color: var(--clr-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h1{
+    color: #f1f5f9;
+}
+.container
+{
+    width: 80%;
+    height:700px;
+    margin: 0 auto;
+    /* border: 10px solid var(--clr-dark); */
+}
+.item
+{
+    width: 150px;
+    height: 100%;
+    background-color: #e11d48;
+    padding: 1em;
+    text-align: center;
+    border: 2px solid var(--clr-dark);
+    border-radius: 5px;
+}
+/* END OF BASE STYLE */ 
+.container
+{
+    display: flex;
+    /* flex-direction: column;  vertical dizme normalde display flex horizontal diziyor */
+    justify-content: space-evenly;
+    /* justify-content: flex-end; sondan başlatıyor dizmeye */
+    align-items: flex-start;
+    align-content: center;
+    flex-wrap: wrap; /* alt satıra geçmesi için*/
+    gap: 3px;
+}
+.item1,.item3
+{
+    flex: 0.2;
+    transition: 0.25s;
+    /*filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+  cursor: pointer;
+     /* align-self: flex-end; */
+    /* order: -1;    -1 ilk getir 1 son getir*/ 
+}
+.item1
+{
+    background-image: url("riseonline.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.item3
+{
+    background-image: url("csbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.item2
+{
+    flex: 0.7;
+    background-image: url("knightOnline.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+
+    transition: 0.25s;
+}
+.item1:hover,.item3:hover
+{
+    flex: 0.95;
+    border-radius: 15px;
+    transition: 0.25s;
+    -webkit-box-shadow:0px 0px 48px 12px #7ec0d4;
+    -moz-box-shadow: 0px 0px 48px 12px #7ec0d4;
+    box-shadow: 0px 0px 48px 12px #7ec0d4;
+    /*filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: grayscale(0); /* Microsoft Edge and Firefox 35+ */
+}
+.item2:hover
+{
+    /*border: 6px solid var(--clr-dark);*/
+
+    -webkit-box-shadow:0px 0px 48px 12px #ff6961;
+    -moz-box-shadow: 0px 0px 48px 12px #ff6961;
+    box-shadow: 0px 0px 48px 12px #ff6961;
+
+    flex: 0.95;
+    border-radius: 20px;
+    -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: grayscale(0); /* Microsoft Edge and Firefox 35+ */
+    transition: 0.25s;
+}
